@@ -58,12 +58,14 @@
                         placeholder="Your Email"
                         required
                     />
-                    <textarea
+                    <div
                         name="message"
-                        placeholder="Your Message"
-                        rows="5"
+                        contenteditable="true"
+                        data-placeholder="Your Message"
+                        class="custom-textarea"
                         required
-                    ></textarea>
+                    ></div>
+
                     <button type="submit" class="glow-btn">Send Message</button>
                 </form>
 

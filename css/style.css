@@ -355,7 +355,6 @@ footer {
 }
 .contact-info {
     flex: 1 1 320px;
-    border: revert;
     max-width: 400px;
     padding: 2rem 1.5rem;
     background-color: #1e293b;
@@ -468,7 +467,7 @@ footer {
     color: #1e293b;
 }
 .light-mode .contact-info {
-    background-color: #e0e7ff;
+    background-color: #020f39;
     color: #1e293b;
 }
 
@@ -477,7 +476,7 @@ footer {
 }
 .light-mode .contact .mail,
 .light-mode .contact .phone {
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 /* Global scroll fade animation */
@@ -717,4 +716,25 @@ video {
         font-size: 0.9rem;
         padding: 0.4rem;
     }
+}
+.custom-textarea {
+    width: 100%;
+    min-height: 120px;
+    background-color: #1e293b;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    outline: none;
+    position: relative;
+    text-align: left;
+}
+
+/* Show placeholder only when empty */
+.custom-textarea:empty::before {
+    content: attr(data-placeholder);
+    color: #aaa;
+    position: absolute;
+    pointer-events: none;
 }
