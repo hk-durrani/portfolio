@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login | CodeNCanvas</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="js/script.js" defer></script>
+        <style>
+            .logo-container {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .logo-img {
+                width: 60px;
+                height: 60px;
+            }
+        </style>
+    </head>
+    <body class="dark-mode">
+        <header class="navbar">
+            <div class="logo-container">
+                <!-- 🔥 Add your logo image here -->
+                <img
+                    src="image/ai-generated-illustration-lion-head-logo-design-vibrant-colors-ai-generated-illustration-lion-head-logo-design-320657705-removebg-preview.png"
+                    alt="Logo"
+                    class="logo-img"
+                />
+                <div class="logo">Code<span>N</span>Canvas</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="active">Login</a></li>
+                    <li><button id="modeToggle">🌓</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="login-section zoom-in">
+            <div class="login-box">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" placeholder="Username" required />
+                    <input type="password" placeholder="Password" required />
+                    <button type="submit" class="glow-btn">Login</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Hamza Rasheed Khan – CodeNCanvas</p>
+        </footer>
+    </body>
+</html>
