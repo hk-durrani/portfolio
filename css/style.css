@@ -354,23 +354,41 @@ footer {
     outline: none;
 }
 .contact-info {
-    flex: 1 1 300px;
+    flex: 1 1 320px;
     max-width: 400px;
+    padding: 2rem 1.5rem;
     background-color: #1e293b;
-
     border-radius: 16px;
     box-shadow: 0 0 10px rgba(147, 51, 234, 0.3);
+    text-align: center; /* Center all text */
 }
+
 .contact-info h2 {
     color: var(--primary);
     margin-bottom: 0.5rem;
+    font-size: 1.3rem;
 }
+
+.contact-info p {
+    margin-bottom: 2rem;
+}
+
 .contact-info p a {
+    display: inline-block;
+    font-size: 1.1rem;
     color: var(--text-light);
     text-decoration: none;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    background-color: #0f172a;
+    width: 100%;
+    max-width: 100%;
+    transition: 0.3s ease;
 }
+
 .contact-info p a:hover {
     color: var(--accent);
+    background-color: #111827;
 }
 
 /* ======= My Work / Gallery Section ======= */
@@ -650,7 +668,6 @@ video {
     }
 
     .contact-container {
-        flex-direction: column;
         gap: 1.5rem;
         align-items: center;
     }
