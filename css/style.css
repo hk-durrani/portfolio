@@ -66,30 +66,6 @@ nav a.active {
     cursor: pointer;
     color: var(--text-light);
 }
-/* Additional mobile fix */
-@media (max-width: 768px) {
-    nav ul {
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: center;
-        gap: 0.5rem;
-        overflow-x: auto;
-    }
-
-    nav ul li {
-        white-space: nowrap;
-    }
-
-    .navbar {
-        flex-direction: column;
-        padding: 0.5rem 1rem;
-    }
-
-    .logo-img {
-        width: 40px;
-        height: 40px;
-    }
-}
 
 /* Hero Section */
 .hero {
@@ -529,36 +505,6 @@ video {
     display: block;
 }
 @media (max-width: 768px) {
-    @media (max-width: 768px) {
-        nav ul {
-            flex-direction: column;
-            align-items: center;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 8px 0;
-        }
-
-        .navbar {
-            flex-direction: column;
-        }
-
-        .navbar nav {
-            width: 100%;
-        }
-    }
-
-    .navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .logo-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .hero {
         flex-direction: column;
         padding: 2rem 1rem;
