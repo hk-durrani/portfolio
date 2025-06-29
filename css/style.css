@@ -7,12 +7,14 @@
     --primary: #9333ea;
     --font-main: "Poppins", sans-serif;
 }
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     font-family: var(--font-main);
     background-color: var(--bg-dark);
     color: var(--text-light);
@@ -23,48 +25,126 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #1e293b;
     align-items: center;
+    background-color: #1e293b;
+    padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 10;
     flex-wrap: wrap;
 }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--accent);
 }
+
 .logo span {
     color: var(--primary);
 }
-nav ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    overflow-x: auto;
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    width: 40px;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
 }
-nav a {
+
+.light-mode .hamburger {
+    color: var(--bg-dark);
+}
+
+/* Navigation Menu (default for desktop) */
+.nav-menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    transition: none;
+    max-height: none;
+    opacity: 1;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-menu a {
     text-decoration: none;
     color: var(--text-light);
     font-weight: 500;
     transition: 0.3s;
     white-space: nowrap;
 }
-nav a:hover,
-nav a.active {
+
+.nav-menu a:hover,
+.nav-menu a.active {
     color: var(--accent);
     border-bottom: 2px solid var(--accent);
 }
+
 #modeToggle {
     background: none;
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
     color: var(--text-light);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .logo-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    .nav-menu.open {
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    .nav-menu ul {
+        gap: 1rem;
+        margin-top: 1rem;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
 
 /* Hero Section */
