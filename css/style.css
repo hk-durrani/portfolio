@@ -252,8 +252,9 @@ footer {
 .tagline {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #cbd5e1;
+    color: #d7d9db;
 }
+
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -440,7 +441,12 @@ footer {
 /* Light mode styles */
 .light-mode {
     background-color: #f4f4f5;
-    color: #111827;
+    color: #876cca;
+}
+
+.light-mode .about {
+    background-color: #f4f4f5;
+    color: #f0eef5;
 }
 .light-mode .navbar {
     background-color: #e2e8f0;
@@ -459,6 +465,11 @@ footer {
 .light-mode .hero .hero-text p {
     color: var(--text-dark);
 }
+
+.light-mode .about .tagline {
+    color: var(--bg-dark);
+}
+
 .light-mode .glow-btn {
     box-shadow: 0 0 15px #9333ea;
 }
@@ -479,6 +490,9 @@ footer {
     color: var(--text-light);
 }
 
+.light-mode .contact .tagline {
+    color: var(--text-dark);
+}
 /* Global scroll fade animation */
 .fade-in-up {
     opacity: 0;
